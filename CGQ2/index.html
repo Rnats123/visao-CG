@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modelagem por Superfície de Revolução</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    
+    <header class="header">
+        <div class="header-content">
+            <h1>Modelagem por Superfície de Revolução</h1>
+            <p>Curvas Paramétricas (Bézier / B-Spline)</p>
+        </div>
+    </header>
+
+   
+    <main class="main-content">
+        
+        <section class="panel-2d">
+            <div class="panel-header">
+                <h2> Perfil 2D</h2>
+                <p class="hint">Clique para adicionar pontos • Arraste para mover</p>
+            </div>
+            
+            <div class="canvas-container">
+                <canvas id="canvas2d" width="300" height="400"></canvas>
+            </div>
+            
+            <div class="panel-footer">
+                <button id="clearBtn" class="btn btn-danger">
+                     Limpar Pontos
+                </button>
+            </div>
+        </section>
+
+        
+        <section class="panel-3d">
+            <div class="panel-header">
+                <h2> Visualização 3D</h2>
+                <p class="hint">Arraste para rotacionar  Scroll para zoom</p>
+            </div>
+            
+            <div class="canvas-container">
+                <canvas id="canvas3d" width="800" height="600"></canvas>
+            </div>
+        </section>
+
+        
+        <aside class="panel-controls">
+            <div class="controls-header">
+                <h2> Parâmetros</h2>
+            </div>
+
+            <div class="controls-content">
+                
+                <div class="control-group">
+                    <label>Tipo de Curva</label>
+                    <div class="btn-group">
+                        <button id="bezierBtn" class="btn btn-toggle active">Bézier</button>
+                        <button id="bsplineBtn" class="btn btn-toggle">B-Spline</button>
+                    </div>
+                </div>
+
+                <div class="control-group" id="degreeControl" style="display: none;">
+                    <label>Grau: <span id="degreeValue">3</span></label>
+                    <input type="range" id="degreeSlider" min="2" max="5" value="3" class="slider">
+                </div>
+
+                
+                <div class="control-group">
+                    <label>Eixo de Revolução</label>
+                    <div class="btn-group">
+                        <button id="axisX" class="btn btn-toggle">X</button>
+                        <button id="axisY" class="btn btn-toggle active">Y</button>
+                        <button id="axisZ" class="btn btn-toggle">Z</button>
+                    </div>
+                </div>
+
+               
+                <div class="control-group">
+                    <label>Ângulo: <span id="angleValue">360</span>°</label>
+                    <input type="range" id="angleSlider" min="0" max="360" value="360" class="slider">
+                </div>
+
+                <div class="control-group">
+                    <label>Subdivisões Angulares: <span id="angularDivValue">32</span></label>
+                    <input type="range" id="angularDivSlider" min="8" max="64" value="32" class="slider">
+                </div>
+
+                
+                <div class="control-group">
+                    <label>Subdivisões do Perfil: <span id="profileDivValue">50</span></label>
+                    <input type="range" id="profileDivSlider" min="10" max="100" value="50" class="slider">
+                </div>
+
+               
+                <div class="control-group">
+                    <label>Modo de Visualização</label>
+                    <div class="btn-group-vertical">
+                        <button id="wireframeBtn" class="btn btn-view">Arame (Wireframe)</button>
+                        <button id="solidBtn" class="btn btn-view active">Sólido (Flat)</button>
+                        <button id="smoothBtn" class="btn btn-view">Suavizado (Smooth)</button>
+                    </div>
+                </div>
+
+                
+                <div class="control-group export-group">
+                    <label> Exportar</label>
+                    <button id="exportOBJ" class="btn btn-export">Exportar OBJ</button>
+                    <button id="exportSTL" class="btn btn-export">Exportar STL</button>
+                    <button id="exportJSON" class="btn btn-export">Exportar JSON</button>
+                </div>
+
+              
+                <div class="control-group info-group">
+                    <div class="info-item">
+                        <span>Pontos de controle:</span>
+                        <span id="pointsCount">4</span>
+                    </div>
+                    <div class="info-item">
+                        <span>Vértices:</span>
+                        <span id="verticesCount">0</span>
+                    </div>
+                    <div class="info-item">
+                        <span>Faces:</span>
+                        <span id="facesCount">0</span>
+                    </div>
+                </div>
+            </div>
+        </aside>
+    </main>
+
+   
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script type="module" src="js/main.js"></script>
+</body>
+</html>
