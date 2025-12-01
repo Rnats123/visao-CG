@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Ligeirinho vs Frajola </title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="header">
+        <div class="title"> Ligeirinho vs Frajola </div>
+        <div class="subtitle">Simulação de Animação 2D com Transformações Afins, Z-Buffer e Iluminação Phong</div>
+    </div>
+
+    <div class="main-container">
+        <div class="canvas-container">
+            <div class="canvas-wrapper">
+                <canvas id="gameCanvas" width="800" height="600"></canvas>
+            </div>
+            
+            <div class="controls">
+                <button class="btn-primary" id="startBtn">
+                    ▶ Iniciar
+                </button>
+                <button class="btn-secondary" id="resetBtn">
+                    ↻ Reset
+                </button>
+                <button class="btn-secondary" id="followBtn">
+                     Seguir Ligeirinho
+                </button>
+            </div>
+
+            <div class="instructions">
+                <strong>Controles:</strong> WASD ou Setas = mover câmera • Clique no Ligeirinho para capturar • Espaço = pausar • Observe: Ligeirinho acelera/desacelera dinamicamente!
+            </div>
+        </div>
+
+        <div class="sidebar">
+            <div class="panel">
+                <div class="panel-title"> Estatísticas</div>
+                <div class="stat-row">
+                    <span class="stat-label">Tempo de Jogo</span>
+                    <span class="stat-value blue" id="timeValue">0.0s</span>
+                </div>
+                <div class="stat-row">
+                    <span class="stat-label">Tentativas de Captura</span>
+                    <span class="stat-value" id="attemptsValue">0</span>
+                </div>
+                <div class="stat-row">
+                    <span class="stat-label">Capturas</span>
+                    <span class="stat-value green" id="capturesValue">0</span>
+                </div>
+                <div class="stat-row">
+                    <span class="stat-label">Taxa de Sucesso</span>
+                    <span class="stat-value yellow" id="successValue">0%</span>
+                </div>
+                <div class="stat-row">
+                    <span class="stat-label">Velocidade Atual</span>
+                    <span class="stat-value orange" id="speedValue">5.0</span>
+                </div>
+                <div class="stat-row">
+                    <span class="stat-label">Escala (tamanho)</span>
+                    <span class="stat-value purple" id="scaleValue">1.0x</span>
+                </div>
+            </div>
+
+            <div class="panel">
+                <div class="panel-title"> Iluminação Phong</div>
+                <div class="stat-row">
+                    <span class="stat-label">Intensidade Total</span>
+                    <span class="stat-value" id="lightIntensity">0.8</span>
+                </div>
+                <div class="stat-row">
+                    <span class="stat-label">Componente Ambiente</span>
+                    <span class="stat-value blue" id="ambientComp">0.3</span>
+                </div>
+                <div class="stat-row">
+                    <span class="stat-label">Componente Difusa</span>
+                    <span class="stat-value green" id="diffuseComp">0.0</span>
+                </div>
+                <div class="stat-row">
+                    <span class="stat-label">Componente Especular</span>
+                    <span class="stat-value yellow" id="specularComp">0.0</span>
+                </div>
+                <div class="stat-row">
+                    <span class="stat-label">Direção Luz</span>
+                    <span class="stat-value small-text" id="lightDir">(-1, -1, -1)</span>
+                </div>
+            </div>
+
+            <div class="panel">
+                <div class="panel-title"> Entidades (com Z-depth)</div>
+                <div class="legend-item">
+                    <div class="legend-dot" style="background: #ff6b6b;"></div>
+                    <span>Ligeirinho (z variável)</span>
+                </div>
+                <div class="legend-item">
+                    <div class="legend-dot" style="background: #4ecdc4;"></div>
+                    <span>Frajola (z = 5)</span>
+                </div>
+                <div class="legend-item">
+                    <div class="legend-dot" style="background: #2d4a2b;"></div>
+                    <span>Cactos (z = 3)</span>
+                </div>
+                <div class="legend-item">
+                    <div class="legend-dot" style="background: #5a4a3a;"></div>
+                    <span>Rochas (z = 2)</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
