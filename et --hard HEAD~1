@@ -1,0 +1,174 @@
+[33mcommit c3a1b2f81aef12b63dc6f472319b8b7f84353c1b[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m)[m
+Author: Rnats123 <natanmont123@gmail.com>
+Date:   Mon Dec 1 01:08:53 2025 -0300
+
+    Adicionar arquivo grande via LFS
+
+ VSQ1/data/cifar-10-python.tar.gz | 3 [32m+++[m
+ 1 file changed, 3 insertions(+)
+
+[33mcommit 962fe8eaf44da2b36ded6e8b460fb33d2ce8dc73[m
+Author: Rnats123 <natanmont123@gmail.com>
+Date:   Mon Dec 1 01:06:16 2025 -0300
+
+    adicionando questao 1 visao
+
+ VSQ1/data/cifar-10-python.tar.gz | 3 [31m---[m
+ 1 file changed, 3 deletions(-)
+
+[33mcommit bcc7b04ad71c772f3a76218d745b1b4ffa6a5295[m
+Author: Rnats123 <natanmont123@gmail.com>
+Date:   Mon Dec 1 01:04:44 2025 -0300
+
+    adicionando questao 1 visao
+
+ .gitattributes                   |   1 [32m+[m
+ VSQ1/data/cifar-10-python.tar.gz | Bin [31m170498071[m -> [32m134[m bytes
+ 2 files changed, 1 insertion(+)
+
+[33mcommit 5ddf190c3c22f93cc27c869cf7c9e2ad052fcb33[m
+Author: Rnats123 <natanmont123@gmail.com>
+Date:   Mon Dec 1 01:00:44 2025 -0300
+
+    adicionando questao 1 visao
+
+ VSQ1/.gitignore                                    |   0
+ VSQ1/README.md                                     |   0
+ VSQ1/config/config.yaml                            |   0
+ VSQ1/data/cifar-10-batches-py/batches.meta         | Bin [31m0[m -> [32m158[m bytes
+ VSQ1/data/cifar-10-batches-py/data_batch_1         | Bin [31m0[m -> [32m31035704[m bytes
+ VSQ1/data/cifar-10-batches-py/data_batch_2         | Bin [31m0[m -> [32m31035320[m bytes
+ VSQ1/data/cifar-10-batches-py/data_batch_3         | Bin [31m0[m -> [32m31035999[m bytes
+ VSQ1/data/cifar-10-batches-py/data_batch_4         | Bin [31m0[m -> [32m31035696[m bytes
+ VSQ1/data/cifar-10-batches-py/data_batch_5         | Bin [31m0[m -> [32m31035623[m bytes
+ VSQ1/data/cifar-10-batches-py/readme.html          |   1 [32m+[m
+ VSQ1/data/cifar-10-batches-py/test_batch           | Bin [31m0[m -> [32m31035526[m bytes
+ VSQ1/data/cifar-10-python.tar.gz                   | Bin [31m0[m -> [32m170498071[m bytes
+ VSQ1/documento.docx                                | Bin [31m0[m -> [32m971937[m bytes
+ VSQ1/main.py                                       | 169 [32m+++++++++++++++++++++[m
+ VSQ1/models/best_models/mobilenet_v2_CIFAR10.pth   | Bin [31m0[m -> [32m9191179[m bytes
+ VSQ1/models/best_models/resnet18_CIFAR10.pth       | Bin [31m0[m -> [32m44805195[m bytes
+ VSQ1/notebooks/analise_comparativa.ipynb           |   0
+ VSQ1/requirements.txt                              |  13 [32m++[m
+ .../mobilenet_v2_CIFAR10_confusion_matrix.png      | Bin [31m0[m -> [32m230782[m bytes
+ .../resnet18_CIFAR10_confusion_matrix.png          | Bin [31m0[m -> [32m232255[m bytes
+ VSQ1/results/metrics/CIFAR10_results.csv           |   3 [32m+[m
+ VSQ1/results/plots/efficiency_comparison.png       | Bin [31m0[m -> [32m207176[m bytes
+ VSQ1/results/plots/metrics_comparison.png          | Bin [31m0[m -> [32m225834[m bytes
+ .../mobilenet_v2_CIFAR10_training_history.png      | Bin [31m0[m -> [32m238293[m bytes
+ .../plots/resnet18_CIFAR10_training_history.png    | Bin [31m0[m -> [32m233148[m bytes
+ VSQ1/src/__init__.py                               |   0
+ VSQ1/src/__pycache__/__init__.cpython-313.pyc      | Bin [31m0[m -> [32m140[m bytes
+ VSQ1/src/__pycache__/data_loader.cpython-313.pyc   | Bin [31m0[m -> [32m4170[m bytes
+ VSQ1/src/__pycache__/evaluate.cpython-313.pyc      | Bin [31m0[m -> [32m6586[m bytes
+ VSQ1/src/__pycache__/models.cpython-313.pyc        | Bin [31m0[m -> [32m4811[m bytes
+ VSQ1/src/__pycache__/train.cpython-313.pyc         | Bin [31m0[m -> [32m6724[m bytes
+ VSQ1/src/__pycache__/visualize.cpython-313.pyc     | Bin [31m0[m -> [32m10222[m bytes
+ VSQ1/src/data_loader.py                            |  93 [32m++++++++++++[m
+ VSQ1/src/evaluate.py                               | 133 [32m++++++++++++++++[m
+ VSQ1/src/models.py                                 |  97 [32m++++++++++++[m
+ VSQ1/src/train.py                                  | 130 [32m++++++++++++++++[m
+ VSQ1/src/utils.py                                  |   0
+ VSQ1/src/visualize.py                              | 168 [32m++++++++++++++++++++[m
+ 38 files changed, 807 insertions(+)
+
+[33mcommit 5237b8469e4015e661f1e9e9b21aeb4ccee8f4d7[m[33m ([m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: Rnats123 <natanmont123@gmail.com>
+Date:   Mon Dec 1 00:56:33 2025 -0300
+
+    adicionando questão vsligeirinho
+
+ VISAOLIGEIRINHO/.vscode/settings.json |   3 [32m+[m
+ VISAOLIGEIRINHO/documento.docx        | Bin [31m0[m -> [32m30274[m bytes
+ VISAOLIGEIRINHO/index.html            | 128 [32m++++++++++++[m
+ VISAOLIGEIRINHO/script.js             | 366 [32m++++++++++++++++++++++++++++++++++[m
+ VISAOLIGEIRINHO/style.css             | 255 [32m+++++++++++++++++++++++[m
+ 5 files changed, 752 insertions(+)
+
+[33mcommit 546e808f4e74f225d90d00473c6ce77952fb4a7c[m
+Author: Rnats123 <natanmont123@gmail.com>
+Date:   Mon Dec 1 00:53:21 2025 -0300
+
+    adicionando questão de CG ligeirinho
+
+ CGLIGEIRINHO/.vscode/settings.json             |   3 [32m+[m
+ CGLIGEIRINHO/css/style.css                     | 181 [32m+++++++[m
+ "CGLIGEIRINHO/documenta\303\247\303\243o.docx" | Bin [31m0[m -> [32m22405[m bytes
+ CGLIGEIRINHO/index.html                        | 115 [32m+++++[m
+ CGLIGEIRINHO/js/main.js                        | 635 [32m+++++++++++++++++++++++++[m
+ 5 files changed, 934 insertions(+)
+
+[33mcommit 9b3ef619db940f2b81fd38e49b613879310becd0[m
+Author: Rnats123 <natanmont123@gmail.com>
+Date:   Mon Dec 1 00:50:46 2025 -0300
+
+    adicionando questao de CG 2
+
+ CGQ2/.vscode/settings.json             |   3 [32m+[m
+ CGQ2/css/style.css                     | 330 [32m+++++++++++++++++++++++++++++++++[m
+ "CGQ2/documenta\303\247\303\243o.docx" | Bin [31m0[m -> [32m18604[m bytes
+ CGQ2/index.html                        | 139 [32m++++++++++++++[m
+ CGQ2/js/CurveGenerator.js              | 105 [32m+++++++++++[m
+ CGQ2/js/Renderer3D.js                  | 207 [32m+++++++++++++++++++++[m
+ CGQ2/js/RevolutionSurface.js           | 122 [32m++++++++++++[m
+ CGQ2/js/UIController.js                | 205 [32m++++++++++++++++++++[m
+ CGQ2/js/main.js                        | 309 [32m++++++++++++++++++++++++++++++[m
+ 9 files changed, 1420 insertions(+)
+
+[33mcommit 5915c6e6bdf7530fdca34c98c26571073873c3b4[m
+Author: Rnats123 <natanmont123@gmail.com>
+Date:   Mon Dec 1 00:46:41 2025 -0300
+
+    revertendo erro
+
+ {.vscode => CGQ1/.vscode}/settings.json    |   0
+ Documento.docx => CGQ1/Documento.docx      | Bin
+ index.html => CGQ1/index.html              |   0
+ {src => CGQ1/src}/app.js                   |   0
+ {src => CGQ1/src}/core/bezier.js           |   0
+ {src => CGQ1/src}/core/canvasController.js |   0
+ {src => CGQ1/src}/core/spline.js           |   0
+ {src => CGQ1/src}/core/utils.js            |   0
+ {src => CGQ1/src}/ui/exportJson.js         |   0
+ {src => CGQ1/src}/ui/sliders.js            |   0
+ {src => CGQ1/src}/ui/tableManager.js       |   0
+ {src => CGQ1/src}/ui/tabs.js               |   0
+ style.css => CGQ1/style.css                |   0
+ 13 files changed, 0 insertions(+), 0 deletions(-)
+
+[33mcommit 8900a0865a8937f12baab594b6f66b23ad356476[m
+Merge: 11d4d4b 403c70f
+Author: Rnats123 <natanmont123@gmail.com>
+Date:   Mon Dec 1 00:33:03 2025 -0300
+
+    Merge branch 'main' of https://github.com/Rnats123/visao-CG
+
+[33mcommit 11d4d4b5b249fb02e18f9588794648196eff117c[m
+Author: Rnats123 <natanmont123@gmail.com>
+Date:   Mon Dec 1 00:29:23 2025 -0300
+
+    COMPUTACAO GRAFICA QUESTÃO1
+
+ .vscode/settings.json        |   3 [32m+[m
+ Documento.docx               | Bin [31m0[m -> [32m10413[m bytes
+ index.html                   |  14 [32m+++[m
+ src/app.js                   |  83 [32m+++++++++++++++[m
+ src/core/bezier.js           |  23 [32m+++++[m
+ src/core/canvasController.js | 199 [32m++++++++++++++++++++++++++++++++++++[m
+ src/core/spline.js           |  58 [32m+++++++++++[m
+ src/core/utils.js            |  19 [32m++++[m
+ src/ui/exportJson.js         |  19 [32m++++[m
+ src/ui/sliders.js            |  45 [32m++++++++[m
+ src/ui/tableManager.js       |  55 [32m++++++++++[m
+ src/ui/tabs.js               |  20 [32m++++[m
+ style.css                    | 238 [32m+++++++++++++++++++++++++++++++++++++++++++[m
+ 13 files changed, 776 insertions(+)
+
+[33mcommit 403c70f937d7906d07005bf3284c03f6b1e6c2f3[m
+Merge: d236205 81148bc
+Author: Vinicius Ederman Magalhães Coelho <87389323+ViniciusEderman@users.noreply.github.com>
+Date:   Mon Dec 1 00:01:36 2025 -0300
+
+    Merge pull request #1 from Rnats123/feature/visao_questao_bonus
+    
+    questão bonus da cadeira de visao
