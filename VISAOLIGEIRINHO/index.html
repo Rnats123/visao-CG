@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ligeirinho vs Frajola - Simulação</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Ligeirinho vs Frajola</h1>
+            <p>Simulação de Detecção e Perseguição</p>
+        </div>
+
+        <div class="main-grid">
+           
+            <div class="canvas-container">
+                <canvas id="gameCanvas" width="800" height="600"></canvas>
+                
+               
+                <div class="controls">
+                    <button id="playBtn" class="btn btn-primary">
+                        <span class="icon">▶</span>
+                        Iniciar
+                    </button>
+                    
+                    <button id="resetBtn" class="btn btn-secondary">
+                        <span class="icon">↻</span>
+                        Reset
+                    </button>
+                    
+                    <button id="configBtn" class="btn btn-secondary">
+                        <span class="icon">⚙</span>
+                        Config
+                    </button>
+                </div>
+            </div>
+
+            <div class="sidebar">
+                <div class="stats-card">
+                    <h3>Estatísticas</h3>
+                    
+                    <div class="stat-item">
+                        <div class="stat-label">Tempo Atual</div>
+                        <div class="stat-value large blue" id="currentTime">0.0s</div>
+                    </div>
+                    
+                    <div class="stat-item">
+                        <div class="stat-label">Tentativas</div>
+                        <div class="stat-value" id="attempts">0</div>
+                    </div>
+                    
+                    <div class="stat-item">
+                        <div class="stat-label">Capturas</div>
+                        <div class="stat-value green" id="captures">0</div>
+                    </div>
+                    
+                    <div class="stat-item">
+                        <div class="stat-label">Taxa de Sucesso</div>
+                        <div class="stat-value yellow" id="successRate">0.0%</div>
+                    </div>
+                    
+                    <div class="stat-item" id="avgTimeContainer" style="display: none;">
+                        <div class="stat-label">Tempo Médio</div>
+                        <div class="stat-value purple" id="avgTime">0.0s</div>
+                    </div>
+                </div>
+
+                <div class="stats-card">
+                    <h3>Estratégia Atual</h3>
+                    <div class="strategy-name" id="currentStrategy">direct</div>
+                </div>
+
+                <div class="stats-card legend">
+                    <div class="legend-item">
+                        <div class="color-box red"></div>
+                        <span>Ligeirinho (<span id="speedySpeedDisplay">10</span> px/f)</span>
+                    </div>
+                    <div class="legend-item">
+                        <div class="color-box cyan"></div>
+                        <span>Frajola (<span id="sylvesterSpeedDisplay">7</span> px/f)</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        
+        <div id="configPanel" class="config-panel" style="display: none;">
+            <h3>Configurações</h3>
+            
+            <div class="config-grid">
+                <div class="config-item">
+                    <label>
+                        Velocidade Ligeirinho: <span id="speedySpeedLabel">10</span> px/frame
+                    </label>
+                    <input type="range" id="speedySpeed" min="6" max="15" value="10" class="slider">
+                </div>
+                
+                <div class="config-item">
+                    <label>
+                        Velocidade Frajola: <span id="sylvesterSpeedLabel">7</span> px/frame
+                    </label>
+                    <input type="range" id="sylvesterSpeed" min="4" max="12" value="7" class="slider">
+                </div>
+                
+                <div class="config-item">
+                    <label>
+                        Distância de Captura: <span id="captureDistanceLabel">25</span> px
+                    </label>
+                    <input type="range" id="captureDistance" min="15" max="40" value="25" class="slider">
+                </div>
+                
+                <div class="config-item">
+                    <label>Estratégia de Perseguição</label>
+                    <select id="strategySelect" class="select">
+                        <option value="direct">Perseguição Direta</option>
+                        <option value="predict">Predição Linear</option>
+                        <option value="patrol">Patrulha + Perseguição</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
