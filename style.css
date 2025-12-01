@@ -1,0 +1,238 @@
+* {
+  box-sizing: border-box;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+body {
+  margin: 0;
+  background: #0f172a;
+  color: #e5e7eb;
+}
+
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.app-header {
+  padding: 16px 24px;
+  border-bottom: 1px solid #1f2937;
+  background: radial-gradient(circle at top left, #1d4ed8, #020617);
+}
+
+.app-header h1 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+.subtitle {
+  font-size: 0.85rem;
+  color: #cbd5f5;
+}
+
+.app-main {
+  display: flex;
+  flex: 1;
+  padding: 12px;
+  gap: 12px;
+}
+
+/* Canvas */
+.canvas-section {
+  flex: 2;
+  background: #020617;
+  border-radius: 12px;
+  border: 1px solid #1f2937;
+  padding: 8px;
+  display: flex;
+  flex-direction: column;
+}
+
+#curveCanvas {
+  border-radius: 8px;
+  border: 1px solid #1f2937;
+  background: #020617;
+  flex: 1;
+}
+
+.canvas-hint {
+  margin-top: 8px;
+  font-size: 0.8rem;
+  color: #9ca3af;
+}
+
+/* Side panel */
+.side-panel {
+  flex: 1.2;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.tabs {
+  display: flex;
+  gap: 4px;
+  margin-bottom: 4px;
+}
+
+.tab-button {
+  flex: 1;
+  padding: 6px 10px;
+  border-radius: 999px;
+  border: 1px solid #1f2937;
+  background: #020617;
+  color: #e5e7eb;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.tab-button.active {
+  background: #2563eb;
+  border-color: #1d4ed8;
+}
+
+.panel {
+  display: none;
+  border-radius: 12px;
+  padding: 10px;
+  border: 1px solid #1f2937;
+  background: #020617;
+}
+
+.panel.active {
+  display: block;
+}
+
+.control-group {
+  margin-bottom: 10px;
+}
+
+.control-group label {
+  display: block;
+  font-size: 0.85rem;
+  margin-bottom: 4px;
+}
+
+.control-label {
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+input[type="range"] {
+  width: 100%;
+}
+
+.hint {
+  margin: 4px 0 0;
+  font-size: 0.8rem;
+  color: #9ca3af;
+}
+
+/* Buttons */
+.btn {
+  padding: 6px 10px;
+  border-radius: 8px;
+  border: 1px solid #374151;
+  background: #111827;
+  color: #e5e7eb;
+  cursor: pointer;
+  font-size: 0.85rem;
+}
+
+.btn:hover {
+  background: #1f2937;
+}
+
+.btn-primary {
+  background: #2563eb;
+  border-color: #1d4ed8;
+}
+
+.btn-primary:hover {
+  background: #1d4ed8;
+}
+
+.btn-danger {
+  background: #b91c1c;
+  border-color: #991b1b;
+}
+
+.btn-danger:hover {
+  background: #dc2626;
+}
+
+/* Points panel */
+.points-panel {
+  flex: 1;
+  border-radius: 12px;
+  padding: 10px;
+  border: 1px solid #1f2937;
+  background: #020617;
+  display: flex;
+  flex-direction: column;
+}
+
+.table-wrapper {
+  max-height: 200px;
+  overflow: auto;
+  margin-top: 6px;
+}
+
+.points-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.8rem;
+}
+
+.points-table th,
+.points-table td {
+  padding: 4px;
+  border-bottom: 1px solid #111827;
+  text-align: center;
+}
+
+.points-table th {
+  position: sticky;
+  top: 0;
+  background: #020617;
+}
+
+.points-table input[type="number"] {
+  width: 70px;
+  padding: 2px;
+  font-size: 0.75rem;
+  background: #020617;
+  border: 1px solid #374151;
+  color: #e5e7eb;
+  border-radius: 4px;
+}
+
+.points-table .row-selected {
+  background: rgba(37, 99, 235, 0.3);
+}
+
+.export-group {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+#jsonOutput {
+  width: 100%;
+  min-height: 120px;
+  background: #020617;
+  border-radius: 8px;
+  border: 1px solid #1f2937;
+  color: #e5e7eb;
+  font-size: 0.75rem;
+  padding: 6px;
+  resize: vertical;
+}
+
+@media (max-width: 900px) {
+  .app-main {
+    flex-direction: column;
+  }
+}
