@@ -2,7 +2,7 @@
 
 import { CurveGenerator } from './CurveGenerator.js';
 import { RevolutionSurface } from './RevolutionSurface.js';
-import { Renderer3D } from './renderer3d.js';
+import { Renderer3D } from './Renderer3D.js';
 import { UIController } from './UIController.js';
 
 class Application {
