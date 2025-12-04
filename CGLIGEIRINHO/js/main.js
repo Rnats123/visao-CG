@@ -174,7 +174,6 @@ const ligeirinho = {
             this.speed = Math.max(this.targetSpeed, this.speed - this.deceleration);
         }
 
-     e
         this.scale = 1.0;
         this.size = this.baseSize;
 
